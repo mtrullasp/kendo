@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overview</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.mobile.min.js"></script>
+    <link href="styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    
+
+<div data-role="view" data-layout="overview-layout" id="overview-cities" data-title="Бьюти студия Царева">
+        <p>Пожлауйста, заполните эти поля и нажмите кнопку Записаться.</p>
+		<ul data-role="listview" data-style="inset">
+            <li>
+                <input type="text" value="Сергей" />
+                Ваше имя
+            </li>
+            <li>
+                <input type="tel" value="79897207459" />
+                Телефон
+            </li>
+            <li>
+                <input type="date" value="" />
+                Дата
+            </li>
+            <li>
+                <input type="time" value="10:00" />
+                Время
+            </li>
+                <li style="text-align:center">
+                    <i></i> <a data-role="button" style="background-color: green; width:100%">Записаться</a>
+                </li>
+        </ul>
+</div>
+
+
+<div data-role="layout" data-id="overview-layout">
+    <header data-role="header">
+        <div data-role="navbar">
+            <!--a class="nav-button" data-align="left" data-role="backbutton">Back</a-->
+            <span data-role="view-title">Царева</span>
+        </div>
+    </header>
+
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="globe" href="#overview-cities">On-line запись</a>
+        </div>
+    </footer>
+</div>
+
+
+
+<style scoped>
+         .km-button:not(.km-back)
+        {
+            
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    #forms input:not([type=checkbox]):not([type=radio]),
+    #forms select,
+    #forms .k-dropdown
+    {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+    }
+</style>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>
